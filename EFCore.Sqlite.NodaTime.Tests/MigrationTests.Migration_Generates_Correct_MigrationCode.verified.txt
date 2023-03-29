@@ -17,6 +17,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Instant = table.Column<string>(type: "TEXT", nullable: false),
+                    Duration = table.Column<string>(type: "TEXT", nullable: false),
                     LocalTime = table.Column<string>(type: "TEXT", nullable: false),
                     LocalDate = table.Column<string>(type: "TEXT", nullable: false),
                     LocalDateTime = table.Column<string>(type: "TEXT", nullable: false)
@@ -28,8 +29,8 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Migrations
 
             migrationBuilder.InsertData(
                 table: "NodaTimeTypes",
-                columns: new[] { "Id", "Instant", "LocalDate", "LocalDateTime", "LocalTime" },
-                values: new object[] { 1, "2020-10-10 23:42:16.321", "2020-10-10", "2020-10-10 23:42:16.321", "23:42:16.321" });
+                columns: new[] { "Id", "Duration", "Instant", "LocalDate", "LocalDateTime", "LocalTime" },
+                values: new object[] { 1, "13002:23:19:49", "2020-10-10 23:42:16.321", "2020-10-10", "2020-10-10 23:42:16.321", "23:42:16.321" });
         }
 
         /// <inheritdoc />

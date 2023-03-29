@@ -70,6 +70,12 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Query.ExpressionTranslators.Inter
                 return SqlExpressionFactory.Date(method.ReturnType, instance, modifiers);
             }
 
+            if (declaringType == typeof(Duration))
+            {
+                var modifiers = GetModifiers(method.Name, arguments[0]);
+                return SqlExpressionFactory.Strftime(method.ReturnType, Constants.TimeFormat, instance, modifiers);
+            }
+
             return null;
         }
 

@@ -37,7 +37,8 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Query.ExpressionTranslators.Inter
             var declaringType = member.DeclaringType;
             if (declaringType == typeof(LocalDateTime) ||
                 declaringType == typeof(LocalDate) ||
-                declaringType == typeof(LocalTime))
+                declaringType == typeof(LocalTime) ||
+                declaringType == typeof(Duration))
             {
                 return TranslateDateTime(instance, member, returnType);
             }

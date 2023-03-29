@@ -13,6 +13,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal
             { typeof(LocalDate), new SqliteTypeMapping<LocalDate>(SqlitePatterns.LocalDate) },
             { typeof(LocalTime), new SqliteTypeMapping<LocalTime>(SqlitePatterns.LocalTime) },
             { typeof(Instant), new SqliteTypeMapping<Instant>(SqlitePatterns.Instant) },
+            { typeof(Duration), new SqliteTypeMapping<Duration>(SqlitePatterns.Duration) },
         };
 
         public RelationalTypeMapping? FindMapping(in RelationalTypeMappingInfo mappingInfo)

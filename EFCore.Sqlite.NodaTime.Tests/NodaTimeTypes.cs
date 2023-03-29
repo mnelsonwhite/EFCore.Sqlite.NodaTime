@@ -6,6 +6,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite
     {
         public int Id { get; set; }
         public Instant Instant { get; set; }
+        public Duration Duration { get; set; }
         public LocalTime LocalTime { get; set; }
         public LocalDate LocalDate { get; set; }
         public LocalDateTime LocalDateTime { get; set; }
